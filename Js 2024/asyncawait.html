@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>async await</title>
+  </head>
+  <body></body>
+  <script>
+    function walkDog() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const dogwalke = true;
+          if (dogwalke) {
+            resolve("You Walked Dog");
+          } else {
+            reject("you dont walekd Dog");
+          }
+        }, 1000);
+      });
+    }
+    function cleanKitche() {
+      //   setTimeout(console.log("You Cleaned the cleanKitche "), 3000);
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const dogwalke = true;
+          if (dogwalke) {
+            resolve("You Cleaned kitchen ");
+          } else {
+            reject("You Dont Cleaned kitchen ");
+          }
+        }, 1000);
+      });
+    }
+    function takeOutTheTrash() {
+      return new Promise((resolve, reject) => {
+        setTimeout(() => {
+          const dogwalke = true;
+          if (dogwalke) {
+            resolve("You Take out theTrash ");
+          } else {
+            reject("YYou Dont Take out theTrash ");
+          }
+        }, 2000);
+      });
+    }
+    async function doChores() {
+      try {
+        const walkDogResult = await walkDog();
+        console.log(walkDogResult);
+        const cleanKitcheResult = await cleanKitche();
+        console.log(cleanKitcheResult);
+        const takeOutTheTrashResult = await takeOutTheTrash();
+        console.log(takeOutTheTrashResult);
+
+        console.log("You Finshed All the cnores");
+      } catch {
+        console.error(error);
+      }
+    }
+    doChores();
+  </script>
+</html>

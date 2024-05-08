@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>
+      any varibale declared out side function is delcared as global variable
+    </p>
+  </body>
+  <script>
+   
+
+    let minNum = 50;
+    let maxNum = 100;
+    const answer = Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum;
+    console.log(answer);
+
+    let attemp = 0;
+    let guess;
+    let running = true;
+
+    while (running) {
+      guess = window.prompt(`Guess a number between ${minNum} to ${maxNum}`);
+      guess = Number(guess);
+      console.log(typeof guess, guess);
+
+      if (isNaN(guess)) {
+        window.alert("Please enter a valid number ");
+      } else if (guess < minNum || guess > maxNum) {
+        window.alert("Please Enter a Valid Number ");
+      } else {
+        attemp++;
+        if (guess < answer) {
+          window.alert("Too low");
+        } else if (guess > answer) {
+          window.alert("Too Hifgh");
+        } else {
+          window.alert(
+            `Correct The answer is ${answer} and your attemps are ${attemp}`
+          );
+          running = false;
+        }
+      }
+    }
+  </script>
+</html>

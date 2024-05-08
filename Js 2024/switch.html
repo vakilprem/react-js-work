@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Start with (" ") .include("-")</p>
+  </body>
+  <script>
+    //lexibale scope
+    let x = 3;
+    function2();
+    // function1();
+    function function1() {
+      let x = 1;
+      console.log(x);
+    }
+    function function2() {
+    //   let x = 2;
+      console.log(x);
+    }
+    let num = "123-456-7890";
+    // num = num.replaceAll("-", "-----");
+    num = num.padStart(15, "0");
+    console.log(num);
+
+    //sclie
+
+    const namee = "Broshep Code";
+    let name = namee.slice(0, 3);
+    let lname = namee.slice(4, 8);
+    console.log(name);
+    console.log(lname);
+    let n;
+    let l;
+    console.log((n = namee.slice(0, 1)));
+    console.log((l = namee.slice(-1)));
+    let fname = namee.slice(0, namee.indexOf(" "));
+    let lnamee = namee.slice(namee.indexOf(" ") + 1);
+    console.log(fname);
+    console.log(lnamee);
+
+    const email = "vakilprem@gmail.com";
+    let username = email.slice(0, email.indexOf("@"));
+    let extention = email.slice(email.indexOf("@") + 1);
+    console.log(username);
+    console.log(extention);
+
+    let uname = window.prompt("Enter your name");
+    uname =
+      uname.trim().charAt(0).toUpperCase() +
+      uname.trim().slice(1).toLocaleLowerCase();
+    // let letter = uname.charAt(0);
+    // letter = letter.toUpperCase();
+    // let extra = uname.slice(1);
+    // extra = extra.toLocaleLowerCase();
+    // uname = letter + extra;
+    console.log(uname);
+  </script>
+</html>

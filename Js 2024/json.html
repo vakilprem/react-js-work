@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>justify-content</title>
+  </head>
+  <body></body>
+  <script>
+    const name = ["Patrik", "Spngebob", "Squidward", "Sandy"];
+    const person = {
+      name: "Spngebob",
+      age: 30,
+      isEmployed: true,
+      hobbies: ["Cricket", "Football"],
+    };
+    const people = [
+      {
+        name: "Spngebob",
+        age: 30,
+        isEmployed: true,
+        hobbies: ["Cricket", "Football"],
+      },
+      {
+        name: "Patrik",
+        age: 27,
+        isEmployed: false,
+        hobbies: ["Cricket", "Football"],
+      },
+    ];
+
+    console.log(person);
+    const jsonString = JSON.stringify(people);
+    console.log(people);
+    console.log(jsonString);
+
+    fetch("Person.json")
+      .then((resp) => resp.json())
+      .then(values => values.forEach(value => console.log(value.name))
+      )
+      .catch((error) => console.log(error));
+  </script>
+</html>

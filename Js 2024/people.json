@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Spngebob",
+    "age": 30,
+    "isEmployed": true,
+    "hobbies": ["Cricket", "Football"]
+  },
+  {
+    "name": "Patrik",
+    "age": 27,
+    "isEmployed": false,
+    "hobbies": ["Cricket", "Football"]
+  }
+]

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Call Backs</title>
+  </head>
+  <body>
+    <p>Callbacks in js</p>
+    <p>Funcation passwd as argument</p>
+    <p>used to handel ascychones application</p>
+    <p>the funcation passed in will execute next</p>
+    <h1 id="myh1"></h1>
+    
+  </body>
+  <script>
+    // hello();
+    goodbye(hello); // passed call back funcation as argument
+    function hello() {
+      console.log("Hello");
+    }
+    function goodbye(callback) {
+      console.log("Byee");
+      callback();
+    }
+
+    //second
+
+    sum(displaycontent, 5, 8);
+
+    function sum(callback, x, y) {
+      let result = x + y;
+      callback(result);
+    }
+    // function display(result) {
+    //   console.log(result);
+    // }
+    function displaycontent(result) {
+      document.getElementById("myh1").textContent = result;
+    }
+  </script>
+</html>

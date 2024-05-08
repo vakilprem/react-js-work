@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Map</p>
+    <p>Filter method</p>
+  </body>
+  <script>
+    //foreach
+    let num = [1, 5, 8, 9, 7];
+
+    num.forEach(tripale);
+    num.forEach(display);
+
+    function double(ele, index, array) {
+      array[index] = ele * 2;
+    }
+    function tripale(ele, index, array) {
+      array[index] = ele * 3;
+    }
+
+    function display(ele) {
+      console.log(ele);
+    }
+
+    //Map
+    const nums = [1, 5, 8, 7, 6];
+    let squares = nums.map(square);
+    console.log(squares);
+
+    function square(ele) {
+      return Math.pow(ele, 2);
+    }
+
+    const date = ["2024-10-05", "2024-15-10", "2024-10-12"];
+    const dateformat = date.map(dates);
+    console.log(dateformat);
+    function dates(element) {
+      const parts = element.split("-");
+      return `${parts[1]}/${parts[2]}/${parts[0]}}`;
+    }
+
+    let val = [1, 2, 3, 4, 5, 6, 7];
+    let evennum = val.filter(isEvan);
+    console.log(evennum);
+    function isEvan(element) {
+      return element % 2 === 0;
+    }
+
+    //Filter
+    let odd = val.filter((element) => element % 2 !== 0);
+    console.log(odd);
+
+    const age = [16, 15, 19, 18, 18, 60];
+    const ageChange = age.filter((data) => data >= 18);
+    console.log(ageChange);
+
+    const child = age.filter(isChild);
+    console.log(child);
+    function isChild(element) {
+      return element <= 18;
+    }
+
+    const word = ["apple", "Bannana", "Kiwi", "Coconate", "Mango"];
+    let shortWords = word.filter(getshortWords);
+    let longWords = word.filter(getLong);
+    console.log(shortWords);
+    console.log(longWords);
+
+    function getshortWords(data) {
+      return data.length <= 6;
+    }
+
+    function getLong(data) {
+      return data.length > 6;
+    }
+
+    //reduce
+
+    let price = [5, 30, 25, 15, 50];
+    let total = price.reduce(Sumation);
+    console.log(`$${total.toFixed(2)}`);
+
+    function Sumation(prev, next) {
+      return prev + next;
+    }
+
+    const grade = [75, 55, 65, 45, 78, 95];
+    const ma = grade.reduce(getMax);
+    console.log(ma);
+    function getMax(prev, next) {
+      return Math.max(prev, next);
+    }
+
+    const min = grade.reduce(getMin);
+    console.log("Minimum Numbet", min);
+    function getMin(next, prev) {
+      return Math.min(prev, next);
+    }
+  </script>
+</html>

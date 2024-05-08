@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Refrnce to the object this is used..</p>
+  </body>
+  <script>
+    console.log("hello");
+    const person = {
+      name: "spongebob",
+      favfood: "Pizza",
+      sayhello: function () {
+        console.log(`Hello ${this.name}`);
+      },
+      eat: function () {
+        console.log(`${this.name} is eating ${this.favfood}`);
+      },
+    };
+    const person2 = {
+      name: "Premal",
+      favfood: "Piburgorzza",
+      sayhello: function () {
+        console.log(`Hello ${this.name}`);
+      },
+      eat: function () {
+        console.log(`${this.name} is eating ${this.favfood}`);
+      },
+    };
+    person.sayhello();
+    person.eat();
+    person2.sayhello();
+    person2.eat();
+  </script>
+</html>

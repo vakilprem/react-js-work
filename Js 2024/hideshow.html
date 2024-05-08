@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide shown</title>
+  </head>
+  <style>
+    #mybtn {
+      font-size: 2rem;
+    }
+  </style>
+  <body>
+    <img src="./Images/img.png" width="400px" id="myimg" />
+    <br />
+    <button id="mybtn">Hide</button>
+  </body>
+  <script>
+    const mybtn = document.getElementById("mybtn");
+    const myimg = document.getElementById("myimg");
+
+    mybtn.addEventListener("click", (event) => {
+      if (myimg.style.visibility === "hidden") {
+        myimg.style.visibility = "visible";
+        mybtn.textContent = "Hide";
+      } else {
+        myimg.style.visibility = "hidden";
+        mybtn.textContent = "Show";
+      }
+    });
+  </script>
+</html>

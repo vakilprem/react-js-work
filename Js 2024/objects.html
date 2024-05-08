@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body></body>
+  <script>
+    const person1 = {
+      firstName: "Spngebob",
+      lastName: "Vakil",
+      age: 30,
+      isEmployed: true,
+      sayHello: function () {
+        console.log("Hi iam Spongebob");
+      },
+      eat: function () {
+        console.log("I am Eating Pizza");
+      },
+    };
+
+    const person2 = {
+      firstName: "Patrik",
+      lastName: "start",
+      age: 30,
+      isEmployed: true,
+      sayHello: () => console.log("Hi iam Patrik"),
+      eat: () => console.log("I am eating burger"),
+    };
+    console.log(person1.firstName);
+    console.log(person1.lastName);
+    console.log(person1.age);
+    person1.sayHello();
+    person1.eat();
+    person2.sayHello();
+    person2.eat();
+
+    console.log(person2.firstName);
+    console.log(person2.lastName);
+    console.log(person2.age);
+  </script>
+</html>

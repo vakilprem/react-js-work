@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Timeout</title>
+  </head>
+  <body>
+    <p>settime out</p>
+
+    <button onclick="start()">Start</button>
+    <button onclick="clear()">Clear</button>
+  </body>
+
+  <script>
+    // function hello() {
+    //   console.log("hello");
+    //   window.alert("hello");
+    // }
+    // setTimeout(hello, 3000);
+    // const time = setTimeout(() => window.alert("Hello"), 3000);
+    // clearTimeout(time);
+    let timeoutId;
+
+    function start() {
+      timeoutId = setTimeout(() => {
+        window.alert("Hello");
+        console.log("Alert shown");
+      }, 3000);
+      console.log("Timeout started");
+    }
+
+    function clear() {
+      clearTimeout(timeoutId);
+      console.log("Timeout cleared");
+    }
+  </script>
+</html>

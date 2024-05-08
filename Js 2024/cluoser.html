@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clouser</title>
+  </head>
+  <body>
+    Clouser
+  </body>
+  <script>
+    function outer() {
+      let message = "HelloThere...";
+      function inner() {
+        console.log(message);
+      }
+      inner();
+    }
+    outer();
+
+    function Counter() {
+      let count = 0;
+      function Increment() {
+        count++;
+        console.log(`Count increased to ${count}`);
+      }
+      function getCount() {
+        return count;
+      }
+      return { Increment, getCount };
+    }
+    const counter = Counter();
+    counter.Increment();
+    counter.Increment();
+    counter.Increment();
+    counter.Increment();
+    counter.Increment();
+    counter.Increment();
+    counter.Increment();
+
+    console.log(`The current count is ${counter.getCount()}`);
+    function Game() {
+      let score = 0;
+      function incease(points) {
+        score += points;
+        console.log(`+${points}pts`);
+      }
+      function descrece(points) {
+        score -= points;
+        console.log(`-${points}pts`);
+      }
+      function getScore() {
+        return score;
+      }
+      return { incease, descrece, getScore };
+    }
+    const game = Game();
+    game.incease(5);
+    game.incease(5);
+    game.incease(5);
+    game.descrece(2);
+    game.descrece(2);
+    game.descrece(2);
+    // incease(6);
+    // incease(8);
+    // incease(3);
+    console.log(`The final score ${game.getScore()}pts`);
+  </script>
+</html>

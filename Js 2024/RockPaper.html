@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bold;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      font-size: 3.5rem;
+      color: rgba(44, 43, 43, 0.373);
+    }
+    .choices {
+      margin-bottom: 30px;
+    }
+    button {
+      font-size: 7.5rem;
+      min-width: 160px;
+      margin: 0 10px;
+      border-radius: 250px;
+      background-color: rgb(102, 102, 156);
+      cursor: pointer;
+      transition: background-color 0.5 ease;
+    }
+    .choices button:hover {
+      background-color: aquamarine;
+    }
+
+    #player,
+    #computer {
+      font-size: 2.5rem;
+    }
+    #result {
+      font-size: 5rem;
+      margin: 30px 0;
+    }
+    .greentext {
+      color: green;
+    }
+    .redText {
+      color: red;
+    }
+  </style>
+  <body>
+    <div id="choices">
+      <h1>Rock - Paper Scissors</h1>
+      <button onclick="playGame('rock')">👊</button>
+      <button onclick="playGame('paper')">🖐️</button>
+      <button onclick="playGame('scissors')">🤟</button>
+    </div>
+
+    <div id="player">PLAYER :</div>
+    <div id="computer">COMPUTER :</div>
+    <div id="result"></div>
+  </body>
+
+  <script>
+    const choices = ["rock", "paper", "scissors"];
+    const player = document.getElementById("player");
+    const computer = document.getElementById("computer");
+    const resultDisplay = document.getElementById("result");
+
+    function playGame(playerChoice) {
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+      let result = "";
+      if (playerChoice === computerChoice) {
+        result = " ITs a Tie";
+      } else {
+        switch (playerChoice) {
+          case "rock":
+            result = computerChoice === "scissors" ? "You Win" : "You Lose";
+            break;
+          case "scissors":
+            result = computer === "paper" ? "You Win" : "You Lose";
+            break;
+          case "paper":
+            result = computer === "rock" ? "You Win" : "You Lose";
+            break;
+        }
+      }
+      player.textContent = `PLAYER : ${playerChoice}`;
+      computer.textContent = `COMPUTER : ${computerChoice}`;
+      resultDisplay.textContent = result;
+      //   result.textContent = result;
+      resultDisplay.classList.remove("greentext", "redText");
+      switch (result) {
+        case "You Win":
+          resultDisplay.classList.add("greentext");
+          break;
+        case "You Lose":
+          resultDisplay.classList.add("redText");
+          break;
+      }
+    }
+  </script>
+</html>

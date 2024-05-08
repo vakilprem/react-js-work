@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #container {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 2em;
+        font-weight: bold;
+      }
+      button {
+        font-size: 1.5rem;
+        padding: 10px 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: aquamarine;
+      }
+      button:active {
+        background-color: violet;
+      }
+      input {
+        font-size: 2rem;
+        width: 150px;
+        text-align: center;
+        font-weight: bold;
+      }
+      #diceresult{
+        margin: 25px;
+      }
+      #diceresult img{
+        width: 150px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="cont">
+      <h1>Dice Roller</h1>
+      <label for="">Number of Dice</label>
+      <input type="number" value="1" min="1" id="numdice" />
+      <button onclick="rollDice()">Roll Dice</button>
+      <div id="diceresult"></div>
+      <div id="diceImage"></div>
+    </div>
+  </body>
+  <!-- <script src="dice.js"></script> -->
+  <script>
+    function rollDice() {
+      const noofdice = document.getElementById("numdice").value;
+      const diceresult = document.getElementById("diceresult");
+      const diceImage = document.getElementById("diceImage");
+
+      const values = [];
+      const images = [];
+
+      for (let i = 0; i < noofdice; i++) {
+        const value = Math.floor(Math.random() * 6) + 1;
+        values.push(value);
+        images.push(`<image src=Images/${value}.png>`);
+      }
+      console.log(values);
+      diceresult.textContent = `dice :${values.join(", ")}`;
+      diceImage.innerHTML = images.join("");
+    }
+  </script>
+</html>

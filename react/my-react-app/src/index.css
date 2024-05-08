@@ -1,0 +1,246 @@
+/* .card {
+  border: 1px solid rgb(88, 86, 86);
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.123);
+  padding: 20px;
+  margin: 10px;
+  text-align: center;
+  max-width: 250px;
+  display: inline-block;
+}
+.card .img {
+  max-width: 60%;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.card .card-title {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: rgb(22, 21, 21);
+}
+.card .card-text {
+  font-family: Arial, Helvetica, sans-serif;
+  color: hsl(0, 0%, 30%);
+}
+.btn {
+  background-color: hsl(200, 100%, 50%);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+} */
+/* .student {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  padding: 10px;
+  border: 1px solid hsl(0, 0%, 50%, 0.8);
+}
+.student p {
+  margin: 0;
+} */
+/* .welcome {
+  font-size: 2.5em;
+  background-color: aquamarine;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+}
+.login {
+  font-size: 2.5em;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 0;
+} */
+/* .list-cat {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 3px solid;
+  border-radius: 5px;
+  background-color: aqua;
+}
+.list-item {
+  font-size: 2em;
+  list-style: none;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+.list-item li:hover {
+  color: aquamarine;
+  cursor: pointer;
+}
+.color-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  margin: 50px;
+  font-size: 3rem;
+}
+.color-display {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid;
+  border-radius: 25px;
+  margin-bottom: 25px;
+  transition: 0.25 ease;
+}
+.color-display p {
+  color: antiquewhite;
+  font-size: 2rem;
+  text-align: center;
+}
+label {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+input[type="color"] {
+  width: 75px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 3px solid hsl(0, 0%, 80%);
+} */
+/* body {
+  background-color: white;
+}
+.todo-list {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+h1 {
+  font-size: 4rem;
+  color: white;
+}
+button {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.5 ease;
+  font-size: 1.7rem;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+}
+.add-btn {
+  background-color: green;
+}
+.add-btn:hover {
+  background-color: blue;
+}
+.del-btn {
+  background-color: red;
+}
+.del-btn:hover {
+  background-color: blueviolet;
+}
+.edit {
+  background-color: brown;
+}
+.move {
+  background-color: skyblue;
+}
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid chocolate;
+  border-radius: 5px;
+  color: black;
+}
+ol {
+  padding: 0;
+}
+li {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 15px;
+  background-color: white;
+  margin-bottom: 10px;
+  border: 3px solid;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+.text {
+  flex: 1;
+}
+.del-btn,
+.move,
+.edit {
+  padding: 8px 14px;
+
+  margin-left: 10px;
+}
+.weather{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+.w-t{
+  margin: 10px;
+  background-color: blue;
+  color: wheat;
+  font-size: 15px;
+  font-size: 25px;
+  width: 100%;
+
+}
+.btn-w{
+  color: black;
+  background-color: red;
+  border-radius: 10px;
+  margin: 10px;
+  font-size: large;
+  font-weight: bold;
+
+}
+.btn-w:hover{
+  background-color: brown;
+} */
+/* body {
+  margin: 0;
+  background-color: skyblue;
+}
+.form {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 35px;
+  font-weight: bolder;
+  color: black;
+  background-color: rgb(205, 246, 255);
+  padding: 15px;
+  line-height: inherit;
+}
+input {
+  height: 25px;
+  width: 525px;
+  border-radius: 5px;
+  border: none;
+}
+button {
+  size: 30px;
+  color: rgb(153, 51, 65);
+  background-color: rgb(180, 127, 255);
+  border-radius: 5px;
+  /* height: 1.7rem; */
+  margin: 10px;
+  padding: 10px;
+} */

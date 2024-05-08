@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array</title>
+  </head>
+  <body>
+    <p>store more than one value</p>
+    <p>spread will spread array in single element</p>
+    <p>rest will bundle elment in to in array</p>
+  </body>
+  <script>
+    let fruits = ["apple", "Orange", "Mango"];
+    fruits.push("cooconent");
+    fruits.push("cooconenttt");
+    fruits.pop();
+    fruits.unshift("Mangooo");
+    // fruits.shift("");
+
+    let num = fruits.length;
+    console.log(num);
+    let index = fruits.indexOf("Orange");
+    console.log(index);
+
+    fruits.sort().reverse();
+    for (let index = 1; index < fruits.length; index += 2) {
+      //   const element = array[index];
+
+      console.log(fruits[index]);
+    }
+    for (let fruit of fruits) {
+      console.log(fruit);
+    }
+
+    //spread opretor
+
+    let numers = [1, 2, 3, 4, 5];
+    let max = Math.max(...numers);
+    let min = Math.min(...numers);
+    console.log(numers);
+    console.log(max);
+    console.log(min);
+
+    //rest
+    function open(...food) {
+      console.log(food);
+    }
+    function toget(...foods) {
+      return foods;
+    }
+    const food1 = "Pizza";
+    const food2 = "Hamburger";
+    const food3 = "Photdog";
+    const food4 = "sushi";
+
+    // open(food1, food2, food3, food4);
+    const foods = toget(food1, food2, food3, food4);
+    // console.log(foods);
+
+    function combine(...name) {
+      return name.join(" ");
+    }
+    let ans = combine("Hi", "i", "am ", "Premal");
+    console.log(ans);
+  </script>
+</html>

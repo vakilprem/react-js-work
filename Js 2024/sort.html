@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    let fruits = [1, 2, 9, 4, 5, 6, 10, 8];
+    let num = fruits.sort((a, b) => a - b);
+    console.log(num);
+
+    let people = [
+      { name: "spongebob", age: 30, gpa: 1.2 },
+      { name: "Patrik", age: 21, gpa: 2.2 },
+      { name: "Sandy", age: 27, gpa: 3.2 },
+      { name: "Bob", age: 29, gpa: 3.2 },
+    ];
+    // people.sort((a, b) => a.age - b.age);
+    // people.sort((a, b) => a.gpa - b.gpa);
+    people.sort((a, b) => a.name.localeCompare(b.name));
+    console.log("Sorted Number", people);
+  </script>
+</html>

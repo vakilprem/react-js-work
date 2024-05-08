@@ -1,0 +1,25 @@
+#count {
+  display: block;
+  text-align: center;
+  font-size: 10em;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+#btn-con {
+  text-align: center;
+}
+.btn {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: aquamarine;
+  background-color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.25sf;
+}
+.btn.hover {
+  background-color: aquamarine;
+}
+#add {
+  font-size: large;
+}

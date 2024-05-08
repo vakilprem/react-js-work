@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Construtor</title>
+  </head>
+  <body>
+    <p>Construtor</p>
+  </body>
+  <script>
+    function Car(make, model, color, year) {
+      this.make = make;
+      this.model = model;
+      this.color = color;
+      this.year = year;
+      this.drive = function () {
+        console.log(`You Drive ${this.model}`);
+      };
+    }
+    const car1 = new Car("Ford", "Mustang", "2024", "Red");
+    const car2 = new Car("Chevrolete", "Camero", 2025, "blue");
+
+    car1.drive();
+
+    // console.log(car1.make);
+    // console.log(car1.model);
+    // console.log(car1.year);
+    // console.log(car1.color);
+
+    // console.log(car2.make);
+    // console.log(car2.model);
+    // console.log(car2.year);
+    // console.log(car2.color);
+  </script>
+</html>

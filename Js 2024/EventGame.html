@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Game</title>
+  </head>
+  <style>
+    #myBox {
+      background-color: lightgreen;
+      width: 300px;
+      height: 300px;
+      font-size: 4.5rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      text-align: center;
+    }
+    #mybtn {
+      font-size: 3rem;
+    }
+  </style>
+  <body>
+    <div id="myBox">Click me 😁</div>
+    <button id="mybtn">Click Me</button>
+    <script>
+      const mybox = document.getElementById("myBox");
+      const mybtn = document.getElementById("mybtn");
+
+      mybtn.addEventListener("click", function (event) {
+        event.target.style.backgroundColor = "tomato";
+        event.target.textContent = "Ouuch 😒";
+      });
+
+      mybox.addEventListener("mouseover", (event) => {
+        event.target.style.backgroundColor = "Yellow";
+        event.target.textContent = "Dont Do it 🤦‍♀️";
+      });
+      mybox.addEventListener("mouseout", (event) => {
+        event.target.style.backgroundColor = "lightgreen";
+        event.target.textContent = "Click me 😍";
+      });
+    </script>
+  </body>
+</html>

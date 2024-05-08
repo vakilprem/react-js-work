@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      margin: 0;
+    }
+    #mybox {
+      background-color: lightblue;
+      width: 200px;
+      height: 200px;
+      font-size: 7.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+  </style>
+  <body>
+    <div id="mybox">😍</div>
+  </body>
+  <script>
+    const mybox = document.getElementById("mybox");
+
+    document.addEventListener("keydown", (event) => {
+      //   console.log(`key Down =${event.key}`);
+      mybox.textContent = "😘";
+      mybox.style.backgroundColor = "tomato";
+    });
+    document.addEventListener("keyup", (event) => {
+      //   console.log(`key up =${event.key}`);
+      mybox.textContent = "😁";
+      mybox.style.backgroundColor = "lightblue";
+    });
+
+    const move = 10;
+    let x = 0;
+    let y = 0;
+
+    document.addEventListener("keydown", (event) => {
+      console.log(event);
+      if (event.key.startsWith("Arrow")) {
+        event.preventDefault();
+        switch (event.key) {
+          case "ArrowUp":
+            y -= move;
+            break;
+          case "ArrowDown":
+            y += move;
+            break;
+          case "ArrowRight":
+            x -= move;
+            break;
+          case "ArrowLeft":
+            x += move;
+            break;
+        }
+        mybox.style.top = `${y}px`;
+        mybox.style.left = `${x}px`;
+      }
+    });
+  </script>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+  </head>
+  <style>
+    body {
+      background-image: url(Images/img.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+    }
+    #clock-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      /* border: 2px solid; */
+    }
+    #clock {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 6.5rem;
+      font-weight: bold;
+      text-align: center;
+      color: white;
+      backdrop-filter: blur(0, 0%, 100%, 0.1);
+      background-color: blueviolet;
+      width: 100%;
+    }
+  </style>
+  <body>
+    <div id="clock-container">
+      <div id="clock">00:00:00</div>
+    </div>
+  </body>
+  <script>
+    function updateClock() {
+      const now = new Date();
+      let hours = now.getHours().toString().padStart(2, 0);
+      const meridiam = hours >= 12 ? "PM" : "AM";
+      hours = hours % 12 || 12;
+      hours = hours.toString().padStart(2, 0);
+      const min = now.getMinutes().toString().padStart(2, 0);
+      const second = now.getSeconds().toString().padStart(2, 0);
+      const timestring = `${hours}:${min}:${second}`;
+      document.getElementById("clock").textContent = timestring;
+    }
+    updateClock();
+    setInterval(updateClock, 1000);
+  </script>
+</html>

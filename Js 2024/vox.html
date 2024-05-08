@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    .box {
+      border: 3px solid;
+      width: 100%;
+      height: 125px;
+    }
+    #fruits {
+      border: 3px solid;
+      font-size: 2rem;
+    }
+  </style>
+  <body>
+    <ol id="fruits">
+      <li id="apple">apple</li>
+      <li id="bannana">bannana</li>
+      <li id="orange">orange</li>
+    </ol>
+    <div id="box1" class="box">
+      <p>Box1</p>
+    </div>
+    <div id="box2" class="box">
+      <p>Box2</p>
+    </div>
+    <div id="box3" class="box">
+      <p>Box3</p>
+    </div>
+    <div id="box4" class="box">
+      <p>Box4</p>
+    </div>
+
+    <script>
+      const newListItem = document.createElement("li");
+      newListItem.textContent = " Coconut";
+      newListItem.id = "coconut";
+      newListItem.style.fontWeight = "bold";
+      newListItem.style.backgroundColor = "blue";
+      document.getElementById("fruits").append(newListItem);
+      const orange = document.getElementById("orange");
+      document.getElementById("fruits").insertBefore(newListItem, bannana);
+
+      //anohter
+      const newh1 = document.createElement("h1");
+      newh1.textContent = "I Like Pizza";
+      //   document.body.prepend(newh1);
+      newh1.style.color = "tomato";
+      newh1.style.textAlign = "center";
+      newh1.id = "myH1";
+      document.getElementById("box1").append(newh1);
+      //   const box2 = document.getElementById("box2");
+      //   document.body.insertBefore(newh1, box2);
+      const boxes = document.querySelectorAll(".box");
+      document.body.insertBefore(newh1, boxes[2]);
+      document.getElementById("box1").removeChild(newh1);
+    </script>
+  </body>
+</html>

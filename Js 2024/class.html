@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Classes</title>
+  </head>
+  <body>
+    <p>class</p>
+    <p>static</p>
+    <p>inheritance</p>
+  </body>
+  <script>
+    class Product {
+      constructor(name, price) {
+        this.name = name;
+        this.price = price;
+      }
+      display() {
+        console.log(`Product : ${this.name}`);
+        console.log(`Product : ${this.price}`);
+      }
+      cal(salesTax) {
+        return this.price + this.price * salesTax;
+      }
+    }
+
+    const salesTax = 0.05;
+    const product1 = new Product("Shirt", 19.99);
+    const product2 = new Product("pants", 22.99);
+    const product3 = new Product("underwear", 100.99);
+    product1.display();
+    product2.display();
+    product3.display();
+    product1.cal();
+    product3.cal();
+
+    const total = product1.cal(salesTax);
+    console.log(`Total prce (with tax) $${total.toFixed(2)}`);
+    const total1 = product3.cal(salesTax);
+    console.log(`Total prce (with tax) $${total1.toFixed(2)}`);
+
+    class Animal {
+      alive = true;
+
+      eat() {
+        console.log(`this ${this.name} is eating`);
+      }
+      sleep() {
+        console.log(`this ${this.name} is eating`);
+      }
+    }
+    class Rabbit extends Animal {
+      name = "rabbit";
+      run() {
+        console.log(`This ${this.name} is Running`);
+      }
+    }
+    class Fish extends Animal {
+      name = "fish";
+      swim() {
+        console.log(`This ${this.name} is Flying`);
+      }
+    }
+    class Dog extends Animal {
+      name = "dog";
+      run() {
+        console.log(`This ${this.name} is Running`);
+      }
+    }
+    const rabbit = new Rabbit();
+    const fish = new Fish();
+    const dog = new Dog();
+
+    console.log(rabbit.alive);
+
+    rabbit.eat();
+    rabbit.sleep();
+    rabbit.run();
+  </script>
+</html>

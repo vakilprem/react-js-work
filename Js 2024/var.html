@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>data</title>
+  </head>
+  <body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="student"></p>
+    <p>ttt</p>
+    <h1 id="wel">Welcome</h1>
+    <label for="">UerName</label>
+    <input type="text" id="text" /><br /><br />
+    <button id="submit">Submit</button>
+  </body>
+  <script>
+    let name = "Premal";
+    let age = 30;
+    let student = false;
+    document.getElementById("name").textContent = `Your name is ${name}`;
+    document.getElementById("age").textContent = `Yuor age is ${age}`;
+    document.getElementById("student").textContent = `f Enrroled ${student}`;
+
+    let cal = 31;
+
+    cal1 = cal + 1;
+    cal2 = cal - 1;
+    cal3 = cal * 1;
+    cal4 = cal / 2;
+    cal5 = cal ** 3;
+    let cal6 = cal % 3;
+    console.log("Additon", cal1);
+    console.log(cal2);
+    console.log(cal3);
+    console.log(cal4);
+    console.log(cal5);
+    console.log(cal6);
+
+    //
+
+    let u = (user = window.prompt(`what is your user name`));
+    u = Number(u);
+    u += 1;
+    console.log(u);
+
+    let usename;
+    document.getElementById("submit").onclick = function () {
+      usename = document.getElementById("text").value;
+      document.getElementById("wel").textContent = `Hello ${usename}`;
+    };
+
+    let x = "pizza";
+    let y = "pizza";
+    let z = "pizza";
+
+    x = Number(x);
+    y = String(y);
+    z = Boolean(z);
+
+    console.log(x, typeof x);
+    console.log(y, typeof y);
+    console.log(z, typeof z);
+  </script>
+</html>
