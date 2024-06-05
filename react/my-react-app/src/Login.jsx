@@ -1,53 +1,64 @@
-import React from 'react';
-import {
-  MDBContainer,
-  MDBInput,
-  MDBCheckbox,
-  MDBBtn,
-  MDBIcon
-}
-from 'mdb-react-ui-kit';
+// import { useState } from "react";
+import "./styles.css";
 
-function App() {
+export default function App() {
+  const [tasks, setTasks] = useState(["Task 1", "Task 2", "Task 3"]);
+  const [newTask, setNewTask] = useState("");
+  const [isEditing, setIsEditing] = useState(false);
+  const [currentTaskIndex, setCurrentTaskIndex] = useState(null);
+
+  const handleAdd = () => {
+    if (newTask.trim()) {
+      if (isEditing) {
+        const updatedTasks = tasks.map((task, index) =>
+          index === currentTaskIndex ? newTask : task
+        );
+        setTasks(updatedTasks);
+        setIsEditing(false);
+        setCurrentTaskIndex(null);
+      } else {
+        setTasks([...tasks, newTask]);
+      }
+      setNewTask("");
+    }
+  };
+
+  const handleDelete = (index) => {
+    const updatedTasks = tasks.filter((_, i) => i !== index);
+    setTasks(updatedTasks);
+  };
+
+  const handleEdit = (task, index) => {
+    setNewTask(task);
+    setIsEditing(true);
+    setCurrentTaskIndex(index);
+  };
+
   return (
-    <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+    <div className="App">
+      <h1>To Do List</h1>
 
-      <MDBInput wrapperClass='mb-4' label='Email address' id='form1' type='email'/>
-      <MDBInput wrapperClass='mb-4' label='Password' id='form2' type='password'/>
-
-      <div className="d-flex justify-content-between mx-3 mb-4">
-        <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Remember me' />
-        <a href="!#">Forgot password?</a>
+      <div>
+        <input
+          type="text"
+          value={newTask}
+          onChange={(e) => setNewTask(e.target.value)}
+          placeholder="Enter the task"
+        />
+        <input type="submit" value={isEditing ? "Update" : "Add"} onClick={handleAdd} />
       </div>
 
-      <MDBBtn className="mb-4">Sign in</MDBBtn>
-
-      <div className="text-center">
-        <p>Not a member? <a href="#!">Register</a></p>
-        <p>or sign up with:</p>
-
-        <div className='d-flex justify-content-between mx-auto' style={{width: '40%'}}>
-          <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-            <MDBIcon fab icon='facebook-f' size="sm"/>
-          </MDBBtn>
-
-          <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-            <MDBIcon fab icon='twitter' size="sm"/>
-          </MDBBtn>
-
-          <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-            <MDBIcon fab icon='google' size="sm"/>
-          </MDBBtn>
-
-          <MDBBtn tag='a' color='none' className='m-1' style={{ color: '#1266f1' }}>
-            <MDBIcon fab icon='github' size="sm"/>
-          </MDBBtn>
-
-        </div>
+      <div>
+        <ul>
+          {tasks.map((task, index) => (
+            <li key={index}>
+              {task} 
+              <button onClick={() => handleDelete(index)}>Delete</button>
+              <button onClick={() => handleEdit(task, index)}>Edit</button>
+            </li>
+          ))}
+        </ul>
       </div>
-
-    </MDBContainer>
+    </div>
   );
 }
-
-export default App; 

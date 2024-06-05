@@ -23,6 +23,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Read from "./Read";
 import Edit from "./Edit";
 import Login from "./Login";
+import FuncationInput from "./FuncationInput";
+import Other from "./Other";
+import Multipale from "./Multipale";
+import Refs from "./Refs";
+import UseRef2 from "./UseRef2";
 
 // import User from "./User";
 // import Student from "./assets/Student";
@@ -62,6 +67,7 @@ function App() {
       {/* <Button />
       <Profile /> */}
       {/* <MyComponent /> */}
+      {/* <ColorPicker /> */}
       {/* <Counter />
       <ColorPicker />
       <Rest />
@@ -78,7 +84,12 @@ function App() {
           <Route path="/edit" element={<Edit />}></Route>
         </Routes>
       </BrowserRouter> */}
-      <Login />
+      {/* <Login /> */}
+      {/* <FuncationInput />
+      <Other />
+      <Multipale />
+      <Refs /> */}
+      <UseRef2 />
     </>
   );
 }
