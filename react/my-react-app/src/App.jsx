@@ -4,30 +4,30 @@
 // import Footer from "./Footer";
 // import Header from "./Header";
 
-import Button from "./Button";
-import ColorPicker from "./ColorPicker";
-import Counter from "./Counter";
-import Create from "./Create";
-import Crud from "./Crud";
-import Foods from "./Foods";
+// import Button from "./Button";
+// import ColorPicker from "./ColorPicker";
+// import Counter from "./Counter";
+// import Create from "./Create";
+// import Crud from "./Crud";
+// import Foods from "./Foods";
 
-import FormValidation from "./FormValidation";
-import List from "./List";
-// import MyComponent from "./MyComponent";
-import Profile from "./Profile";
-import Rest from "./Rest";
-import ToDoList from "./ToDoList";
-// import Todo2 from "./Todo2";
+// import FormValidation from "./FormValidation";
+// import List from "./List";
+// // import MyComponent from "./MyComponent";
+// import Profile from "./Profile";
+// import Rest from "./Rest";
+// import ToDoList from "./ToDoList";
+// // import Todo2 from "./Todo2";
 import Weather from "./Weather";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Read from "./Read";
-import Edit from "./Edit";
-import Login from "./Login";
-import FuncationInput from "./FuncationInput";
-import Other from "./Other";
-import Multipale from "./Multipale";
-import Refs from "./Refs";
-import UseRef2 from "./UseRef2";
+// import Edit from "./Edit";
+// import Login from "./Login";
+// import FuncationInput from "./FuncationInput";
+// import Other from "./Other";
+// import Multipale from "./Multipale";
+// import Refs from "./Refs";
+// import UseRef2 from "./UseRef2";
 
 // import User from "./User";
 // import Student from "./assets/Student";
@@ -74,7 +74,7 @@ function App() {
       <Foods /> */}
       {/* <ToDoList /> */}
       {/* <Todo2 /> */}
-      {/* <Weather/> */}
+      <Weather />
       {/* <FormValidation /> */}
       {/* <Crud /> */}
       {/* <BrowserRouter>
@@ -89,7 +89,7 @@ function App() {
       <Other />
       <Multipale />
       <Refs /> */}
-      <UseRef2 />
+      {/* <UseRef2 /> */}
     </>
   );
 }

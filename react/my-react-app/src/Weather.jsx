@@ -1,12 +1,13 @@
-import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useEffect, useState } from "react";
 function Weather() {
   const [search, setSearch] = useState("");
   const [weather, setWeather] = useState({});
 
   function getWeather() {
-    const apikey = "abc4d6012bec9d73a15370c13c32b86b";
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${apikey}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=${
+      import.meta.env.VITE_APP_ID
+    }`;
 
     axios.get(url).then((response) => {
       const data = response.data;
